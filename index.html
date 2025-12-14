@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT SKILLS TEST 2Q</title>
+
+ <style> 
+  body {
+     background-image: url('https://img.freepik.com/premium-photo/classroom-with-colorful-posters-walls_1179130-486507.jpg?semt=ais_hybrid&w=740&q=80');
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+  }
+
+  .container {
+      background-color: rgb(87, 87, 87);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 27px rgba(0,0,0,0.2);
+      max-width: 600px;
+      margin: 0 auto;
+        }
+
+  h2{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(225, 222, 218);
+    color: rgb(56, 56, 56);
+    text-align: center;
+    font-size: 40px;
+    padding: 9px;        
+    border-radius: 10px;
+  }
+
+  h3{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(225, 222, 218);
+    color: rgb(56, 56, 56);
+    font-size: 18px;
+  }
+
+  h4{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(225, 222, 218);
+    color: rgb(56, 56, 56);
+    font-size: 25px;
+  }
+
+  #output { 
+     background-color: rgba(255, 255, 255, 0.8);
+     padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+        }
+
+ </style></head>
+
+    <body class= "container mt-5"> <!--so that we can have a table for the whole design-->
+
+<br><br>
+
+        <h2>School Club Information ☀</h2><!--Title-->
+
+<br>
+        <h3>Not just for school, but also for your engagement! ^</h3> <!--semi-title-->
+<br>
+        <h4>Select a Club:</h4>  <!--Semi-title-->
+<br>
+   
+    <select class="form-select" id="clubs">   <!--Options for your chosen Club -->
+     <option selected>Choose</option>
+       <option id="marching">Marching Band</option>
+       <option id="glee">Glee Club</option>
+       <option id="dance">Dance Club</option>
+       <option id="math">Math Club</option>
+       <option id="science">Science Club</option>
+       <option id="arts">Communications Arts Club</option>
+       <option id="cocc">COCC</option>
+       <option id="ss">Social Science Club</option>
+       <option id="vball">Volleyball Varsity</option>
+       <option id="bball">Basketball Varsity</option>
+
+</select></div></div>
+
+<br>
+
+   <div class="text-center">  <!--the button we press to show the details of the club-->
+       <button class="btn btn-secondary"style="width: 110px;" py-click="submit_club" type="submit">Show Club Info</button>
+       <div id="output"></div> <!--so that we can see the results of our selected club when we press the button-->
+
+
+  <!-- connect it to main.py -->
+    <py-config>
+        [[fetch]]
+        files = ["main.py"]
+    </py-config>
+      <script type="py" src="main.py"></script>
+   </div>
+   </body>
+    </html>
